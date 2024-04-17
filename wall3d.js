@@ -1,4 +1,5 @@
 (function () {
+    console.log(111);
     const stageElem = document.querySelector('.stage');
     const houseElem = document.querySelector('.house');
     const barElem = document.querySelector('.progress-bar');
