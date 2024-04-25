@@ -19,13 +19,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="icon" href="./favicon.ico">
-    
+   
+  
+  
     <script>
       $(function () {
         $('[data-toggle="tooltip"]').tooltip();
 
         const text = document.getElementById("name");
 
+        
         const load = () =>{
           setTimeout(() =>{
             text.textContent = "ㅅ|"
@@ -192,6 +195,29 @@
         setInterval(load,8400);
       })
     </script>
+
+<script type="text/javascript">  
+  var Request = function() {  
+      this.getParameter = function(name) {  
+          var rtnval = '';  
+          var nowAddress = unescape(location.href);  
+          var parameters = (nowAddress.slice(nowAddress.indexOf('?') + 1,  
+                  nowAddress.length)).split('&');  
+          for (var i = 0; i < parameters.length; i++) {  
+              var varName = parameters[i].split('=')[0];  
+              if (varName.toUpperCase() == name.toUpperCase()) {  
+                  rtnval = parameters[i].split('=')[1];  
+                  break;  
+              }  
+          }  
+          return rtnval;  
+      }  
+  }  
+  var request = new Request();  
+
+  var paramValue = request.getParameter('parameter_name');  
+  console.log(paramValue);
+</script>  
     <!-- <script src="./Character.js"></script>
     <script src="./wall3d.js"></script>
     <script>
@@ -777,7 +803,7 @@
                       공급상품 , 유지보수 및 배송제한 , 업체관리 등 내부 백오피스 툴 개발
                     </li>
                     <li>
-                      <strong>KAKAO MAP API를 사용한 구매 고객 데이터 지도 서비스 정책을 추진 및 개발</strong>
+                      <strong>KAKAO MAP API를 사용한 구매 고객 데이터 지도 서비스 정책 추진 및 개발</strong>
                     </li>
                       <ul>
                         <li>
