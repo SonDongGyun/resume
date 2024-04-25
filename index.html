@@ -218,6 +218,12 @@ console.log(1111);
 
   var paramValue = request.getParameter('gubun');  
   console.log(paramValue);
+  if(paramValue != null && paramValue == '1'){
+    var images = document.querySelectorAll('.images');
+    for(i in images.length){
+        console.log(images[i].href);
+    }
+  }
 </script>  
     <!-- <script src="./Character.js"></script>
     <script src="./wall3d.js"></script>
@@ -232,7 +238,7 @@ console.log(1111);
     </script> -->
   <style>
 .images{
-  
+  display: none;
 }
 
   </style>
