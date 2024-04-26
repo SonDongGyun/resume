@@ -60,13 +60,15 @@
     }
   }else if(paramValue == '2'){
     console.log(2222);
-    console.log(callback());
-     setInterval(()=>{
+    
+    var time =  setInterval(()=>{
+      console.log(callback());
                if(callback()[0] == 15 && callback()[1] == 16 && callback()[2] == 17 &&
                    callback()[3] == 25 && callback()[4] == 30 && callback()[5] == 31 ){
                    console.log('답은 : ' + callback());
                    clearInterval(time);
                }
+
            },300);
         
   }
