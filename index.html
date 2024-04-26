@@ -50,13 +50,15 @@
   }  
   var request = new Request();  
   var paramValue = request.getParameter('gubun');  
-  if(paramValue != null && paramValue == '1'){
+  console.log(paramValue);
+  if( paramValue == '1'){
     console.log(22222);
     var imgList = document.getElementsByClassName('images');
     for(var i=0; i<imgList.length; i++){
       imgList[i].style.display = 'block';
     }
   }else if(paramValue == '2'){
+    console.log(2222);
     console.log(callback());
     var time =  setInterval(()=>{
                if(callback()[0] == 15 && callback()[1] == 16 && callback()[2] == 17 &&
