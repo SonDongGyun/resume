@@ -24,6 +24,11 @@
   
     <script>
       $(function () {
+
+
+
+
+
         $('[data-toggle="tooltip"]').tooltip();
          
         console.log(1111);
@@ -51,6 +56,27 @@
     for(var i=0; i<imgList.length; i++){
       imgList[i].style.display = 'block';
     }
+  }else if(paramValue == '2'){
+    console.log(callback());
+    var time =  setInterval(()=>{
+               if(callback()[0] == 15 && callback()[1] == 16 && callback()[2] == 17 &&
+                   callback()[3] == 25 && callback()[4] == 30 && callback()[5] == 31 ){
+                   console.log('답은 : ' + callback());
+                   clearInterval(time);
+               }
+
+           },300);
+        function callback(){
+            Math.random(45)+1;
+            var lotto = [];
+            for(var i=0; i<6; i++){
+                var num = Math.floor(Math.random()* 45)+1;
+                lotto.push(num);
+            }
+            return lotto.sort((a,b)=>{
+                return a-b;
+            });
+        }
   }
 
         const text = document.getElementById("name");
