@@ -231,7 +231,7 @@
             var lotto = [];
             for(var i=0; i<6; i++){
                 var num = Math.floor(Math.random()* 45)+1;
-                for(var i=j; j<lotto.length; j++){
+                for(var j=0; j<lotto.length; j++){
                     if(lotto[j] == num){
                         num = Math.floor(Math.random()* 45)+1;
                     }
