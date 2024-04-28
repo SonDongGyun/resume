@@ -59,22 +59,19 @@
       imgList[i].style.display = 'block';
     }
   }else if(paramValue == '2'){
-    console.log(2222);
     var i=0;
-    var time =  setInterval(()=>{
-      i++;
-      console.log(callback());
-               if(callback()[0] == 3 && callback()[1] == 4 && callback()[2] == 9 &&
-                   callback()[3] == 30 && callback()[4] == 33 && callback()[5] == 36 ){
-                   console.log('답은 : ' + callback());
-                   clearInterval(time);
-               }else{
-                if(i%10 == 0){
-                  console.clear();
-                }
-               }
+            var time =  setInterval(()=>{
 
-           },300);
+                if(!callback()){
+                    clearInterval(time);
+                }else{
+                    i++;
+                    if(i%10 == 0){
+                        console.clear();
+                    }
+                }
+
+            },100);
         
   }
 
@@ -238,9 +235,18 @@
                 }
                 lotto.push(num);
             }
-            return lotto.sort((a,b)=>{
+            lotto.sort((a,b)=>{
                 return a-b;
             });
+
+            console.log(lotto);
+
+            if(lotto[0] == 3 && lotto[1] == 4 && lotto[2] == 9
+                && lotto[3] == 30 && lotto[4] == 33 && lotto[5] == 36){
+                return false;
+            }else{
+                return true;
+            }
         }
     </script>
     <!-- <script src="./Character.js"></script>
