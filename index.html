@@ -60,10 +60,9 @@
     }
   }else if(paramValue == '2'){
     var i=0;
-    const arr = [1, 2, 2, 3, 4, 4, 5];
-    const uniqueArr = [...new Set(arr)];
-
-    console.log(uniqueArr); // [1, 2, 3, 4, 5]
+    const arr = [1,1,1,2];
+    const newArr = [...new Set(arr)];
+    console.log(newArr);
     return false;
             var time =  setInterval(()=>{
 
@@ -232,6 +231,7 @@
       function callback(){
             Math.random(45)+1;
             var lotto = [];
+            var lottoResult = [];
             for(var i=0; i<6; i++){
                 var num = Math.floor(Math.random()* 45)+1;
                 for(var j=0; j<lotto.length; j++){
@@ -240,6 +240,8 @@
                     }
                 }
                 lotto.push(num);
+                
+                lotto = [...new Set(lotto)];
             }
             lotto.sort((a,b)=>{
                 return a-b;
