@@ -31,7 +31,7 @@
 
         $('[data-toggle="tooltip"]').tooltip();
          
-        console.log(1111);
+        
   var Request = function() {  
       this.getParameter = function(name) {  
           var rtnval = '';  
@@ -50,16 +50,21 @@
   }  
   var request = new Request();  
   var paramValue = request.getParameter('gubun');  
-  console.log(paramValue);
+  
 
   if( paramValue == '1'){
-    console.log(22222);
+    
     var imgList = document.getElementsByClassName('images');
     for(var i=0; i<imgList.length; i++){
       imgList[i].style.display = 'block';
     }
   }else if(paramValue == '2'){
     var i=0;
+    const arr = [1, 2, 2, 3, 4, 4, 5];
+    const uniqueArr = [...new Set(arr)];
+
+    console.log(uniqueArr); // [1, 2, 3, 4, 5]
+    return false;
             var time =  setInterval(()=>{
 
                 if(!callback()){
@@ -248,6 +253,8 @@
             }else{
                 return true;
             }
+
+
         }
     </script>
     <!-- <script src="./Character.js"></script>
