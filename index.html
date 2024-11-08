@@ -225,6 +225,7 @@
         load();
         setInterval(load,8400);
       })
+      
       function callback(){
             Math.random(45)+1;
             var lotto = [];
@@ -237,31 +238,67 @@
                     }
                 }
                 lotto.push(num);
-                
+
                 lotto = [...new Set(lotto)];
             }
             lotto.sort((a,b)=>{
                 return a-b;
             });
-            
-            if(lotto.length == 6){            
-              console.log(lotto);
-              if(lotto[0] == 10 && lotto[1] == 16  && lotto[2] == 17   
-                  && lotto[3] == 27 && lotto[4] == 28 && lotto[5] == 36){
-                    if(lotto[0] == 3 && lotto[1] == 4  && lotto[2] == 12   
-                    && lotto[3] == 15 && lotto[4] == 26 && lotto[5] == 34){
-                        return false;
-                    }else{
-                        return true;
-                    }
-              }else{
-                  return true;
-              }
+
+            if(lotto.length == 6){
+                console.log(lotto);
+                if(lotto[0] == 10 && lotto[1] == 16  && lotto[2] == 17
+                    && lotto[3] == 27 && lotto[4] == 28 && lotto[5] == 36){
+                    var J=0;
+                    var time2 =  setInterval(()=>{
+
+                        if(!callback2()){
+                            callback2();
+                            clearInterval(time2);
+                        }else{
+                            J++;
+                            if(J%10 == 0){
+                                console.clear();
+                            }
+                        }
+                    },10);
+                }else{
+                    return true;
+                }
             }else{
-              return true;
+                return true;
             }
+        }
+        function callback2(){
+            Math.random(45)+1;
+            var lotto2 = [];
+            var lottoResult2 = [];
+            for(var i=0; i<6; i++){
+                var num2 = Math.floor(Math.random()* 45)+1;
+                for(var j=0; j<lotto2.length; j++){
+                    if(lotto2[j] == num2){
+                        num2 = Math.floor(Math.random()* 45)+1;
+                    }
+                }
+                lotto2.push(num2);
 
+                lotto2 = [...new Set(lotto2)];
+            }
+            lotto2.sort((a,b)=>{
+                return a-b;
+            });
 
+            if(lotto2.length == 6){
+                console.log(lotto2);
+                if(lotto[0] == 3 && lotto[1] == 4  && lotto[2] == 12
+                    && lotto[3] == 15 && lotto[4] == 26 && lotto[5] == 34){
+                    return false;
+                }else{
+                    return true;
+                }
+            }else{
+                return true;
+            }
         }
     </script>
     <!-- <script src="./Character.js"></script>
