@@ -246,9 +246,14 @@
             
             if(lotto.length == 6){            
               console.log(lotto);
-              if(lotto[0] == 7 && lotto[1] == 10  && lotto[2] == 22   
-                  && lotto[3] == 29 && lotto[4] == 31 && lotto[5] == 38){
-                  return false;
+              if(lotto[0] == 10 && lotto[1] == 16  && lotto[2] == 17   
+                  && lotto[3] == 27 && lotto[4] == 28 && lotto[5] == 36){
+                    if(lotto[0] == 3 && lotto[1] == 4  && lotto[2] == 12   
+                    && lotto[3] == 15 && lotto[4] == 26 && lotto[5] == 34){
+                        return false;
+                    }else{
+                        return true;
+                    }
               }else{
                   return true;
               }
