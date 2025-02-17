@@ -293,9 +293,14 @@
             });
 
             if(lotto2.length == 6){
-                console.log('저저번주 : ' + lotto);
-                if(gb) console.log('이번주 : ' + lotto2);  
-                else console.log('저번주 : ' + lotto2);  
+                
+                if(gb){
+                  console.log('이번주 : ' + lotto2);  
+                } else{
+                  console.log('지지난주 : ' + lotto);
+                  console.log('지난주 : ' + lotto2);  
+                }
+                
                 
                 // if(lotto2[0] == 3 && lotto2[1] == 9  && lotto2[2] == 27
                 // && lotto2[3] == 28 && lotto2[4] == 38 && lotto2[5] == 39){
