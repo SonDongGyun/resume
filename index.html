@@ -252,8 +252,9 @@
                 if(lotto[0] == 21){
                     var J=0;
                     var time2 =  setInterval(()=>{
-
-                        if(!callback2(lotto)){
+                        var isCallback2 = callback2(lotto);
+                        console.log("이번주 리턴값 : " +isCallback2);
+                        if(!isCallback2){
                             callback2(lotto);
                             clearInterval(time2);
                         }else{
