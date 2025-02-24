@@ -247,8 +247,9 @@
 
             if(lotto.length == 6){
                 console.log(lotto);
-                 if(lotto[0] == 21 && lotto[1] == 25  && lotto[2] == 27
-                 && lotto[3] == 32 && lotto[4] == 37 && lotto[5] == 38){
+                //  if(lotto[0] == 21 && lotto[1] == 25  && lotto[2] == 27
+                //  && lotto[3] == 32 && lotto[4] == 37 && lotto[5] == 38){
+                if(lotto[0] == 1){}
                     var J=0;
                     var time2 =  setInterval(()=>{
                         var gb = false;
@@ -301,8 +302,66 @@
                 }
                 
                 
-                if(lotto2[0] == 3 && lotto2[1] == 9  && lotto2[2] == 27
-                 && lotto2[3] == 28 && lotto2[4] == 38 && lotto2[5] == 39){                
+                // if(lotto2[0] == 3 && lotto2[1] == 9  && lotto2[2] == 27
+                //  && lotto2[3] == 28 && lotto2[4] == 38 && lotto2[5] == 39){    
+                  if(lotto2[0] == 2){           
+                    //return false;
+                    var J=0;
+                    var time3 =  setInterval(()=>{
+                        var gb = false;
+                        var isCallback3 = callback3(lotto ,lotto2 , gb);
+                        //console.log("이번주 리턴값 : " +isCallback2);
+                        if(!isCallback3){
+                            gb = true;
+                            callback3(lotto ,lotto2 , gb);
+                            clearInterval(time3);
+                        }else{
+                            J++;
+                            if(J%10 == 0){
+                                console.clear();
+                            }
+                        }
+                    },10);
+                }else{
+                    return true;
+                }
+            }else{
+                return true;
+            }
+        }
+        function callback3(lotto , lotto2 , gb){
+            Math.random(45)+1;
+            var lotto3 = [];
+            var lottoResult3 = [];
+            for(var i=0; i<6; i++){
+                var num3 = Math.floor(Math.random()* 45)+1;
+                for(var j=0; j<lotto3.length; j++){
+                    if(lotto3[j] == num3){
+                        num3 = Math.floor(Math.random()* 45)+1;
+                    }
+                }
+                lotto3.push(num3);
+
+                lotto3 = [...new Set(lotto3)];
+            }
+            lotto3.sort((a,b)=>{
+                return a-b;
+            });
+
+            if(lotto3.length == 6){
+                
+                if(gb){
+                  console.log('이번주 : ' + lotto3);  
+                } else{
+                  console.log('지지지난주 : ' + lotto);
+                  console.log('지지난주 : ' + lotto2);
+                  console.log('지난주 : ' + lotto3);  
+                }
+                
+                
+                // if(lotto3[0] == 3 && lotto3[1] == 9  && lotto3[2] == 27
+                //  && lotto3[3] == 28 && lotto3[4] == 38 && lotto3[5] == 39){     
+                  if(lotto3[0] == 3){                      
                     return false;
                 }else{
                     return true;
