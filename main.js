@@ -192,7 +192,7 @@ const text = document.getElementById("name");
       },8250);
     }
     
-    load();
+    //load();
     //setInterval(load,8400);
   })
   
