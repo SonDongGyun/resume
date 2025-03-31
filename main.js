@@ -217,8 +217,8 @@ const text = document.getElementById("name");
 
         if(lotto.length == 6){
             console.log(lotto);
-            if(lotto[0] == 20 && lotto[1] == 21  && lotto[2] == 22
-              && lotto[3] == 25 && lotto[4] == 28 && lotto[5] == 29){           
+            if(lotto[0] == 2 && lotto[1] == 13  && lotto[2] == 15
+              && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){      
                 var J=0;
                 var time2 =  setInterval(()=>{
                     var gb = false;
@@ -271,8 +271,8 @@ const text = document.getElementById("name");
             // }
             console.log(lotto2);
             
-            if(lotto2[0] == 2 && lotto2[1] == 13  && lotto2[2] == 15
-              && lotto2[3] == 16 && lotto2[4] == 33 && lotto2[5] == 43){     
+            if(lotto2[0] == 17 && lotto2[1] == 18  && lotto2[2] == 23
+              && lotto2[3] == 25 && lotto2[4] == 38 && lotto2[5] == 39){     
               
                 //return false;
                 var J=0;
@@ -328,8 +328,8 @@ const text = document.getElementById("name");
             }
             
             
-             if(lotto3[0] == 17 && lotto3[1] == 18  && lotto3[2] == 23
-              && lotto3[3] == 25 && lotto3[4] == 38 && lotto3[5] == 39){     
+             if(lotto3[0] == 6 && lotto3[1] == 7  && lotto3[2] == 27
+              && lotto3[3] == 29 && lotto3[4] == 38 && lotto3[5] == 45){     
               
                 return false;
             }else{
