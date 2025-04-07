@@ -216,14 +216,12 @@ const text = document.getElementById("name");
 
         if(lotto.length == 6){
             console.log(lotto);
-            if(lotto[0] == 1){
-            // if(lotto[0] == 2 && lotto[1] == 13  && lotto[2] == 15
-            //   && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){      
+            if(lotto[0] == 2 && lotto[1] == 13  && lotto[2] == 15
+              && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){      
                 var J=0;
                 var time2 =  setInterval(()=>{
                     var gb = false;
                     var isCallback2 = callback2(lotto , gb);
-                    //console.log("이번주 리턴값 : " +isCallback2);
                     if(!isCallback2){
                         gb = true;
                         callback2(lotto , gb);
@@ -263,16 +261,13 @@ const text = document.getElementById("name");
         if(lotto2.length == 6){
             
             console.log(lotto2);
-            if(lotto2[0] == 1){
-            // if(lotto2[0] == 17 && lotto2[1] == 18  && lotto2[2] == 23
-            //   && lotto2[3] == 25 && lotto2[4] == 38 && lotto2[5] == 39){     
+            if(lotto2[0] == 17 && lotto2[1] == 18  && lotto2[2] == 23
+              && lotto2[3] == 25 && lotto2[4] == 38 && lotto2[5] == 39){     
               
-                //return false;
                 var J=0;
                 var time3 =  setInterval(()=>{
                     var gb = false;
                     var isCallback3 = callback3(lotto ,lotto2 , gb);
-                    //console.log("이번주 리턴값 : " +isCallback2);
                     if(!isCallback3){
                         gb = true;
                         callback3(lotto ,lotto2 , gb);
@@ -312,16 +307,13 @@ const text = document.getElementById("name");
       if(lotto3.length == 6){
           
           console.log(lotto3);
-          if(lotto3[0] == 2){
-          // if(lotto3[0] == 17 && lotto3[1] == 18  && lotto3[2] == 23
-          //   && lotto3[3] == 25 && lotto3[4] == 38 && lotto3[5] == 39){     
+          if(lotto3[0] == 17 && lotto3[1] == 18  && lotto3[2] == 23
+            && lotto3[3] == 25 && lotto3[4] == 38 && lotto3[5] == 39){     
             
-              //return false;
               var J=0;
               var time4 =  setInterval(()=>{
                   var gb = false;
                   var isCallback4 = callback4(lotto ,lotto2 ,lotto3 , gb);
-                  //console.log("이번주 리턴값 : " +isCallback2);
                   if(!isCallback4){
                       gb = true;
                       callback4(lotto ,lotto2 ,lotto3 , gb);
@@ -368,10 +360,8 @@ const text = document.getElementById("name");
               console.log('2주전 : ' + lotto3);  
               console.log('1주전 : ' + lotto4);  
             }
-            if(lotto4[0] == 3){
-            
-            //  if(lotto4[0] == 6 && lotto4[1] == 7  && lotto4[2] == 27
-            //   && lotto4[3] == 29 && lotto4[4] == 38 && lotto4[5] == 45){     
+             if(lotto4[0] == 6 && lotto4[1] == 7  && lotto4[2] == 27
+              && lotto4[3] == 29 && lotto4[4] == 38 && lotto4[5] == 45){     
               
                 return false;
             }else{
