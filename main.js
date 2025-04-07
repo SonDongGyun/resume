@@ -217,7 +217,7 @@ const text = document.getElementById("name");
         if(lotto.length == 6){
             console.log(lotto);
             if(lotto[0] == 2 && lotto[1] == 13  && lotto[2] == 15
-              && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){      
+              && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){          
                 var J=0;
                 var time2 =  setInterval(()=>{
                     var gb = false;
@@ -307,8 +307,8 @@ const text = document.getElementById("name");
       if(lotto3.length == 6){
           
           console.log(lotto3);
-          if(lotto3[0] == 17 && lotto3[1] == 18  && lotto3[2] == 23
-            && lotto3[3] == 25 && lotto3[4] == 38 && lotto3[5] == 39){     
+          if(lotto3[0] == 6 && lotto3[1] == 7  && lotto3[2] == 27
+            && lotto3[3] == 29 && lotto3[4] == 38 && lotto3[5] == 45){     
             
               var J=0;
               var time4 =  setInterval(()=>{
@@ -360,8 +360,8 @@ const text = document.getElementById("name");
               console.log('2주전 : ' + lotto3);  
               console.log('1주전 : ' + lotto4);  
             }
-             if(lotto4[0] == 6 && lotto4[1] == 7  && lotto4[2] == 27
-              && lotto4[3] == 29 && lotto4[4] == 38 && lotto4[5] == 45){     
+             if(lotto4[0] == 14 && lotto4[1] == 23  && lotto4[2] == 25
+              && lotto4[3] == 27 && lotto4[4] == 29 && lotto4[5] == 42){     
               
                 return false;
             }else{
