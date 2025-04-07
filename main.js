@@ -312,7 +312,7 @@ const text = document.getElementById("name");
       if(lotto3.length == 6){
           
           console.log(lotto3);
-          if(lotto[0] == 2){
+          if(lotto3[0] == 2){
           // if(lotto3[0] == 17 && lotto3[1] == 18  && lotto3[2] == 23
           //   && lotto3[3] == 25 && lotto3[4] == 38 && lotto3[5] == 39){     
             
@@ -368,7 +368,7 @@ const text = document.getElementById("name");
               console.log('2주전 : ' + lotto3);  
               console.log('1주전 : ' + lotto4);  
             }
-            if(lotto[0] == 3){
+            if(lotto4[0] == 3){
             
             //  if(lotto4[0] == 6 && lotto4[1] == 7  && lotto4[2] == 27
             //   && lotto4[3] == 29 && lotto4[4] == 38 && lotto4[5] == 45){     
