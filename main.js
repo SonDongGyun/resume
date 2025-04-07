@@ -199,7 +199,6 @@ const text = document.getElementById("name");
   function callback(){
         Math.random(45)+1;
         var lotto = [];
-        var lottoResult = [];
         for(var i=0; i<6; i++){
             var num = Math.floor(Math.random()* 45)+1;
             for(var j=0; j<lotto.length; j++){
@@ -217,8 +216,9 @@ const text = document.getElementById("name");
 
         if(lotto.length == 6){
             console.log(lotto);
-            if(lotto[0] == 2 && lotto[1] == 13  && lotto[2] == 15
-              && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){      
+            if(lotto[0] == 1){
+            // if(lotto[0] == 2 && lotto[1] == 13  && lotto[2] == 15
+            //   && lotto[3] == 16 && lotto[4] == 33 && lotto[5] == 43){      
                 var J=0;
                 var time2 =  setInterval(()=>{
                     var gb = false;
@@ -245,7 +245,6 @@ const text = document.getElementById("name");
     function callback2(lotto , gb){
         Math.random(45)+1;
         var lotto2 = [];
-        var lottoResult2 = [];
         for(var i=0; i<6; i++){
             var num2 = Math.floor(Math.random()* 45)+1;
             for(var j=0; j<lotto2.length; j++){
@@ -263,16 +262,10 @@ const text = document.getElementById("name");
 
         if(lotto2.length == 6){
             
-            // if(gb){
-            //   console.log('이번주 : ' + lotto2);  
-            // } else{
-            //   console.log('지지난주 : ' + lotto);
-            //   console.log('지난주 : ' + lotto2);  
-            // }
             console.log(lotto2);
-            
-            if(lotto2[0] == 17 && lotto2[1] == 18  && lotto2[2] == 23
-              && lotto2[3] == 25 && lotto2[4] == 38 && lotto2[5] == 39){     
+            if(lotto2[0] == 1){
+            // if(lotto2[0] == 17 && lotto2[1] == 18  && lotto2[2] == 23
+            //   && lotto2[3] == 25 && lotto2[4] == 38 && lotto2[5] == 39){     
               
                 //return false;
                 var J=0;
@@ -298,38 +291,87 @@ const text = document.getElementById("name");
             return true;
         }
     }
-    function callback3(lotto , lotto2 , gb){
+    function callback3(lotto , gb){
+      Math.random(45)+1;
+      var lotto3 = [];
+      for(var i=0; i<6; i++){
+          var num3 = Math.floor(Math.random()* 45)+1;
+          for(var j=0; j<lotto3.length; j++){
+              if(lotto3[j] == num3){
+                  num3 = Math.floor(Math.random()* 45)+1;
+              }
+          }
+          lotto3.push(num3);
+
+          lotto3 = [...new Set(lotto3)];
+      }
+      lotto3.sort((a,b)=>{
+          return a-b;
+      });
+
+      if(lotto3.length == 6){
+          
+          console.log(lotto3);
+          if(lotto[0] == 2){
+          // if(lotto3[0] == 17 && lotto3[1] == 18  && lotto3[2] == 23
+          //   && lotto3[3] == 25 && lotto3[4] == 38 && lotto3[5] == 39){     
+            
+              //return false;
+              var J=0;
+              var time4 =  setInterval(()=>{
+                  var gb = false;
+                  var isCallback4 = callback4(lotto ,lotto2 ,lotto3 , gb);
+                  //console.log("이번주 리턴값 : " +isCallback2);
+                  if(!isCallback4){
+                      gb = true;
+                      callback4(lotto ,lotto2 ,lotto3 , gb);
+                      clearInterval(time4);
+                  }else{
+                      J++;
+                      if(J%10 == 0){
+                          console.clear();
+                      }
+                  }
+              },10);
+          }else{
+              return true;
+          }
+      }else{
+          return true;
+      }
+    }
+    function callback4(lotto , lotto2 , lotto3 , gb){
         Math.random(45)+1;
-        var lotto3 = [];
-        var lottoResult3 = [];
+        var lotto4 = [];
         for(var i=0; i<6; i++){
-            var num3 = Math.floor(Math.random()* 45)+1;
-            for(var j=0; j<lotto3.length; j++){
-                if(lotto3[j] == num3){
-                    num3 = Math.floor(Math.random()* 45)+1;
+            var num4 = Math.floor(Math.random()* 45)+1;
+            for(var j=0; j<lotto4.length; j++){
+                if(lotto4[j] == num4){
+                    num4 = Math.floor(Math.random()* 45)+1;
                 }
             }
-            lotto3.push(num3);
+            lotto4.push(num4);
 
-            lotto3 = [...new Set(lotto3)];
+            lotto4 = [...new Set(lotto4)];
         }
-        lotto3.sort((a,b)=>{
+        lotto4.sort((a,b)=>{
             return a-b;
         });
 
-        if(lotto3.length == 6){
+        if(lotto4.length == 6){
             
             if(gb){
-              console.log('번호추천 : ' + lotto3);  
+              console.log('번호추천 : ' + lotto4);  
             } else{
-              console.log('지지지난주 : ' + lotto);
-              console.log('지지난주 : ' + lotto2);
-              console.log('지난주 : ' + lotto3);  
+              console.log('4주전 : ' + lotto);
+              console.log('3주전 : ' + lotto2);
+              console.log('2주전 : ' + lotto3);  
+              console.log('1주전 : ' + lotto4);  
             }
+            if(lotto[0] == 3){
             
-            
-             if(lotto3[0] == 6 && lotto3[1] == 7  && lotto3[2] == 27
-              && lotto3[3] == 29 && lotto3[4] == 38 && lotto3[5] == 45){     
+            //  if(lotto4[0] == 6 && lotto4[1] == 7  && lotto4[2] == 27
+            //   && lotto4[3] == 29 && lotto4[4] == 38 && lotto4[5] == 45){     
               
                 return false;
             }else{
