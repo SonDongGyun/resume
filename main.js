@@ -291,7 +291,7 @@ const text = document.getElementById("name");
             return true;
         }
     }
-    function callback3(lotto , gb){
+    function callback3(lotto ,lotto2, gb){
       Math.random(45)+1;
       var lotto3 = [];
       for(var i=0; i<6; i++){
