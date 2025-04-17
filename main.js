@@ -333,35 +333,82 @@ const text = document.getElementById("name");
       }
     }
     function callback4(lotto , lotto2 , lotto3 , gb){
+      Math.random(45)+1;
+      var lotto4 = [];
+      for(var i=0; i<6; i++){
+          var num4 = Math.floor(Math.random()* 45)+1;
+          for(var j=0; j<lotto4.length; j++){
+              if(lotto4[j] == num4){
+                  num4 = Math.floor(Math.random()* 45)+1;
+              }
+          }
+          lotto4.push(num4);
+
+          lotto4 = [...new Set(lotto4)];
+      }
+      lotto4.sort((a,b)=>{
+          return a-b;
+      });
+
+      if(lotto4.length == 6){
+          
+          console.log(lotto4);
+          if(lotto4[0] == 14 && lotto4[1] == 23  && lotto4[2] == 25
+            && lotto4[3] == 27 && lotto4[4] == 29 && lotto4[5] == 42){     
+            
+              var J=0;
+              var time5 =  setInterval(()=>{
+                  var gb = false;
+                  var isCallback5 = callback4(lotto ,lotto2 ,lotto3,lotto4 , gb);
+                  if(!isCallback5){
+                      gb = true;
+                      callback5(lotto ,lotto2 ,lotto3,lotto4 , gb);
+                      clearInterval(time5);
+                  }else{
+                      J++;
+                      if(J%10 == 0){
+                          console.clear();
+                      }
+                  }
+              },10);
+          }else{
+              return true;
+          }
+      }else{
+          return true;
+      }
+    }
+    function callback5(lotto , lotto2 , lotto3 , lotto4, gb){
         Math.random(45)+1;
-        var lotto4 = [];
+        var lotto5 = [];
         for(var i=0; i<6; i++){
-            var num4 = Math.floor(Math.random()* 45)+1;
-            for(var j=0; j<lotto4.length; j++){
-                if(lotto4[j] == num4){
-                    num4 = Math.floor(Math.random()* 45)+1;
+            var num5 = Math.floor(Math.random()* 45)+1;
+            for(var j=0; j<lotto5.length; j++){
+                if(lotto5[j] == num5){
+                  num5 = Math.floor(Math.random()* 45)+1;
                 }
             }
-            lotto4.push(num4);
+            lotto5.push(num5);
 
-            lotto4 = [...new Set(lotto4)];
+            lotto5 = [...new Set(lotto5)];
         }
-        lotto4.sort((a,b)=>{
+        lotto5.sort((a,b)=>{
             return a-b;
         });
 
-        if(lotto4.length == 6){
+        if(lotto5.length == 6){
             
             if(gb){
-              console.log('번호추천 : ' + lotto4);  
+              console.log('번호추천 : ' + lotto5);  
             } else{
-              console.log('4주전 : ' + lotto);
-              console.log('3주전 : ' + lotto2);
-              console.log('2주전 : ' + lotto3);  
-              console.log('1주전 : ' + lotto4);  
+              console.log('5주전 : ' + lotto);
+              console.log('4주전 : ' + lotto2);
+              console.log('3주전 : ' + lotto3);  
+              console.log('2주전 : ' + lotto4);  
+              console.log('1주전 : ' + lotto5);  
             }
-             if(lotto4[0] == 8 && lotto4[1] == 23  && lotto4[2] == 31
-              && lotto4[3] == 35 && lotto4[4] == 39 && lotto4[5] == 40){     
+             if(lotto5[0] == 8 && lotto5[1] == 23  && lotto5[2] == 31
+              && lotto5[3] == 35 && lotto5[4] == 39 && lotto5[5] == 40){     
               
                 return false;
             }else{
