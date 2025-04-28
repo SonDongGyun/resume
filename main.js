@@ -216,8 +216,8 @@ const text = document.getElementById("name");
 
         if(lotto.length == 6){
             console.log(lotto);
-            if(lotto[0] == 17 && lotto[1] == 18  && lotto[2] == 23
-              && lotto[3] == 25 && lotto[4] == 38 && lotto[5] == 39){            
+            if(lotto[0] == 6 && lotto[1] == 7  && lotto[2] == 27
+              && lotto[3] == 29 && lotto[4] == 38 && lotto[5] == 45){           
                 var J=0;
                 var time2 =  setInterval(()=>{
                     var gb = false;
@@ -261,8 +261,8 @@ const text = document.getElementById("name");
         if(lotto2.length == 6){
             
             console.log(lotto2);
-            if(lotto2[0] == 6 && lotto2[1] == 7  && lotto2[2] == 27
-              && lotto2[3] == 29 && lotto2[4] == 38 && lotto2[5] == 45){         
+            if(lotto2[0] == 14 && lotto2[1] == 23  && lotto2[2] == 25
+              && lotto2[3] == 27 && lotto2[4] == 29 && lotto2[5] == 42){       
               
                 var J=0;
                 var time3 =  setInterval(()=>{
@@ -307,8 +307,8 @@ const text = document.getElementById("name");
       if(lotto3.length == 6){
           
           console.log(lotto3);
-          if(lotto3[0] == 14 && lotto3[1] == 23  && lotto3[2] == 25
-            && lotto3[3] == 27 && lotto3[4] == 29 && lotto3[5] == 42){     
+          if(lotto3[0] == 8 && lotto3[1] == 23  && lotto3[2] == 31
+            && lotto3[3] == 35 && lotto3[4] == 39 && lotto3[5] == 40){ 
             
               var J=0;
               var time4 =  setInterval(()=>{
@@ -353,8 +353,8 @@ const text = document.getElementById("name");
       if(lotto4.length == 6){
           
           console.log(lotto4);
-          if(lotto4[0] == 8 && lotto4[1] == 23  && lotto4[2] == 31
-            && lotto4[3] == 35 && lotto4[4] == 39 && lotto4[5] == 40){     
+          if(lotto4[0] == 9 && lotto4[1] == 21  && lotto4[2] == 24
+            && lotto4[3] == 30 && lotto4[4] == 33 && lotto4[5] == 37){      
             
               var J=0;
               var time5 =  setInterval(()=>{
@@ -407,8 +407,8 @@ const text = document.getElementById("name");
               console.log('2주전 : ' + lotto4);  
               console.log('1주전 : ' + lotto5);  
             }
-             if(lotto5[0] == 9 && lotto5[1] == 21  && lotto5[2] == 24
-              && lotto5[3] == 30 && lotto5[4] == 33 && lotto5[5] == 37){     
+             if(lotto5[0] == 5 && lotto5[1] == 12  && lotto5[2] == 24
+              && lotto5[3] == 26 && lotto5[4] == 39 && lotto5[5] == 42){     
               
                 return false;
             }else{
