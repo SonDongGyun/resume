@@ -216,8 +216,7 @@ const text = document.getElementById("name");
 
         if(lotto.length == 6){
             console.log('5주전 : ' + lotto);
-            if(lotto[0] == 6 && lotto[1] == 7  && lotto[2] == 27
-              && lotto[3] == 29 && lotto[4] == 38 && lotto[5] == 45){           
+            if(lotto[0] == 1){           
                 var J=0;
                 var time2 =  setInterval(()=>{
                     var gb = false;
@@ -261,8 +260,7 @@ const text = document.getElementById("name");
         if(lotto2.length == 6){
             
           console.log('4주전 : ' + lotto2);
-            if(lotto2[0] == 14 && lotto2[1] == 23  && lotto2[2] == 25
-              && lotto2[3] == 27 && lotto2[4] == 29 && lotto2[5] == 42){       
+            if(lotto2[0] == 1){       
               
                 var J=0;
                 var time3 =  setInterval(()=>{
@@ -307,8 +305,7 @@ const text = document.getElementById("name");
       if(lotto3.length == 6){
           
         console.log('3주전 : ' + lotto3);
-          if(lotto3[0] == 8 && lotto3[1] == 23  && lotto3[2] == 31
-            && lotto3[3] == 35 && lotto3[4] == 39 && lotto3[5] == 40){ 
+          if(lotto3[0] == 1){ 
             
               var J=0;
               var time4 =  setInterval(()=>{
@@ -353,8 +350,7 @@ const text = document.getElementById("name");
       if(lotto4.length == 6){
           
         console.log('2주전 : ' + lotto4);
-          if(lotto4[0] == 9 && lotto4[1] == 21  && lotto4[2] == 24
-            && lotto4[3] == 30 && lotto4[4] == 33 && lotto4[5] == 37){      
+          if(lotto4[0] == 1){      
             
               var J=0;
               var time5 =  setInterval(()=>{
@@ -407,8 +403,7 @@ const text = document.getElementById("name");
               console.log('2주전 : ' + lotto4);  
               console.log('1주전 : ' + lotto5);  
             }
-             if(lotto5[0] == 5 && lotto5[1] == 12  && lotto5[2] == 24
-              && lotto5[3] == 26 && lotto5[4] == 39 && lotto5[5] == 42){     
+             if(lotto5[0] == 1){     
               
                 return false;
             }else{
