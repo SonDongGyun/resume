@@ -355,7 +355,7 @@ const text = document.getElementById("name");
               var J=0;
               var time5 =  setInterval(()=>{
                   var gb = false;
-                  var isCallback5 = callback4(lotto ,lotto2 ,lotto3,lotto4 , gb);
+                  var isCallback5 = callback5(lotto ,lotto2 ,lotto3,lotto4 , gb);
                   if(!isCallback5){
                       gb = true;
                       callback5(lotto ,lotto2 ,lotto3,lotto4 , gb);
