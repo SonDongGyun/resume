@@ -215,7 +215,7 @@ function callback(){
       });
 
       if(lotto.length == 6){
-          console.log('5주전-0602 : ' + lotto);
+          console.log('5주전-0609 : ' + lotto);
            if(lotto[0] == 3 && lotto[1] == 6  && lotto[2] == 7
             && lotto[3] == 11 && lotto[4] == 12 && lotto[5] == 17){  
               var J=0;
