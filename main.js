@@ -215,9 +215,9 @@ function callback(){
       });
 
       if(lotto.length == 6){
-          console.log('5주전-0609 : ' + lotto);
-           if(lotto[0] == 3 && lotto[1] == 6  && lotto[2] == 7
-            && lotto[3] == 11 && lotto[4] == 12 && lotto[5] == 17){  
+          console.log('5주전-0617 : ' + lotto);
+           if(lotto[0] == 7 && lotto[1] == 9  && lotto[2] == 24
+            && lotto[3] == 40 && lotto[4] == 42 && lotto[5] == 44){  
               var J=0;
               var time2 =  setInterval(()=>{
                   var gb = false;
@@ -261,8 +261,8 @@ function callback(){
       if(lotto2.length == 6){
           
         console.log('4주전 : ' + lotto2);
-       if(lotto2[0] == 7 && lotto2[1] == 9  && lotto2[2] == 24
-            && lotto2[3] == 40 && lotto2[4] == 42 && lotto2[5] == 44){   
+      if(lotto2[0] == 1 && lotto2[1] == 5  && lotto2[2] == 18
+            && lotto2[3] == 20 && lotto2[4] == 30 && lotto2[5] == 35){     
             
               var J=0;
               var time3 =  setInterval(()=>{
@@ -307,8 +307,8 @@ function callback(){
     if(lotto3.length == 6){
         
       console.log('3주전 : ' + lotto3);
-     if(lotto3[0] == 1 && lotto3[1] == 5  && lotto3[2] == 18
-            && lotto3[3] == 20 && lotto3[4] == 30 && lotto3[5] == 35){      
+   if(lotto3[0] == 8 && lotto3[1] == 11  && lotto3[2] == 14
+            && lotto3[3] == 17 && lotto3[4] == 36 && lotto3[5] == 39){        
           
             var J=0;
             var time4 =  setInterval(()=>{
@@ -353,8 +353,8 @@ function callback(){
     if(lotto4.length == 6){
         
       console.log('2주전 : ' + lotto4);
-      if(lotto4[0] == 8 && lotto4[1] == 11  && lotto4[2] == 14
-            && lotto4[3] == 17 && lotto4[4] == 36 && lotto4[5] == 39){     
+     if(lotto4[0] == 3 && lotto4[1] == 4  && lotto4[2] == 6
+            && lotto4[3] == 8 && lotto4[4] == 32 && lotto4[5] == 42){     
           
             var J=0;
             var time5 =  setInterval(()=>{
@@ -407,8 +407,8 @@ function callback(){
             console.log('2주전 : ' + lotto4);  
             console.log('1주전 : ' + lotto5);  
           }
-          if(lotto5[0] == 3 && lotto5[1] == 4  && lotto5[2] == 6
-            && lotto5[3] == 8 && lotto5[4] == 32 && lotto5[5] == 42){     
+          if(lotto5[0] == 7 && lotto5[1] == 9  && lotto5[2] == 11
+            && lotto5[3] == 21 && lotto5[4] == 30 && lotto5[5] == 35){     
             
               return false;
           }else{
