@@ -418,5 +418,4 @@ function callback(){
           return true;
       }
   }
-      if(lotto5[0] == 3 && lotto5[1] == 16  && lotto5[2] == 18
-            && lotto5[3] == 24 && lotto5[4] == 40 && lotto5[5] == 44){     
+     
